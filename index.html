@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Noto+Sans+KR:wght@900&display=swap');
+    </style>
+    <title>Momentum</title>
+</head>
+<body>
+<div class="container">
+    <div class="date    "></div>
+    <div class="userGreeting">
+        <span><p>뭐라고 부르면 좋을까요?</p></span>
+        <input type="text" id="userName" name="greeting" onchange='greeting()' autofocus>
+    </div>
+    <div class="list">
+        <span id="toDoSentence"><p>오늘은 뭘 해야하죠?</p></span>
+        <input type="text" id="toDoList" name="list" onchange='makingToDoList()'>
+    </div>
+
+    <div class="itemList" onclick='completeItems()'></div>
+    <div class="footer"></div>
+</div>
+
+<script src="/clock.js"></script>
+</body>
+</html>
