@@ -12,11 +12,28 @@
     setTimeout(getTodayTime, 1000);
 })();
 
-function greeting() {
-    const userName = document.querySelector('#userName').value;
+function inputName() {
+    if (localStorage.getItem('userName') === null) {
+        document.querySelector('.askingName').style.display = 'none';
+        const inputUserName = document.querySelector('#userName').value;
+        const userName = localStorage.setItem('userName', inputUserName);
+        greeting(localStorage.getItem('userName'));
+    }
+}
+
+function checkingName() {
+    if (localStorage.getItem('userName') !== null) {
+        document.querySelector('.askingName').style.display = 'none';
+        const userName = localStorage.getItem('userName')
+        greeting(userName);
+    }
+}
+
+checkingName();
+
+function greeting(userName) {
     document.querySelector('.userGreeting').innerText = `안녕하세요. ${userName}님!`;
     document.querySelector('.list').style.display = 'block';
-
     document.querySelector('#toDoList').focus();
 }
 

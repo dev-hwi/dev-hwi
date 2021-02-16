@@ -17,12 +17,12 @@ body {
     font-size: 10em;
 }
 
-.userGreeting {
+.userGreeting, .askingName {
     text-align: center;
     font-size: 3em;
 }
 
-#userName {
+#userName, #greetingUser {
     font-size: 3rem;
     text-align: center;
     border: 0;
